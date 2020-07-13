@@ -6,6 +6,6 @@ function mostrar()
 {
 	var Nombre;
 	Nombre=prompt("ingrese su nombre por favor ", "Ingrese aqui");
-	document.getElementById("txtIdNombre").value=Nombre;
+	txtIdNombre.value=Nombre;
 }
 

@@ -6,7 +6,8 @@ function mostrar()
 	var nombreIngresado;
 	nombreIngresado=txtIdNombre.value;
 	alert(nombreIngresado);
-
+//lowey cameri test que empiesa con minuscula y entre medio tiene mayusculas por ejemplo nombreIngresado
+//no olvidar el value
 }
 
 
