@@ -13,7 +13,7 @@ largo=txtIdLargo.value;
 largo=parseInt(largo);
 ancho=txtIdAncho.value;
 ancho=parseInt(ancho);
-resultado=(largo*ancho)*3;
+resultado=(largo*2+ancho*2)*3;
 alert("La cantidad de alambre que necesita comprar es "+resultado);
 
 }
@@ -23,7 +23,7 @@ function Circulo ()
     var resultado;
     radio=txtIdRadio.value;
     radio=parseInt(radio);
-    resultado=(radio*3.14)*3;
+    resultado=(radio*Math.PI*2)*3;
     alert("La cantidad de alambre que necesita es "+resultado);
 }
 function Materiales () 
