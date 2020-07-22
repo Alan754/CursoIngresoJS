@@ -23,8 +23,9 @@ function Circulo ()
     var resultado;
     radio=txtIdRadio.value;
     radio=parseInt(radio);
-    resultado=(radio*Math.PI*2)*3;
+    resultado=(2*Math.PI*radio)*3;
     alert("La cantidad de alambre que necesita es "+resultado);
+    //para sacar radio de un circulo 2*Match.PI*radio
 }
 function Materiales () 
 {
