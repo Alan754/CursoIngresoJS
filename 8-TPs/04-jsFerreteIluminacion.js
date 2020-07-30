@@ -10,43 +10,74 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-  var precioUnitario;
-  precioUnitario=35;
-  var cantidadDeLamparas;
-  cantidadDeLamparas=txtIdCantidad.value;
-  cantidadDeLamparas=parseInt(cantidadDeLamparas);
-  var precioDeLamparas;
-  precioDeLamparas=precioUnitario*(cantidadDeLamparas);
+ var precioUnitario;
+ precioUnitario=35;
+ var cantidadDeLamparas;
+ cantidadDeLamparas=txtIdCantidad.value;
+ cantidadDeLamparas=parseInt(cantidadDeLamparas);
+ var precioTotal;
+ precioTotal=precioUnitario*(cantidadDeLamparas);
+ var descuento;
+ var marca;
+ marca=Marca.value;
+ var precioFinal;
+  if(cantidadDeLamparas>5) 
+ {
+  descuento=precioTotal-(precioTotal*50/100);
+  txtIdprecioDescuento.value=descuento;
+ }
+   if (cantidadDeLamparas==5 && marca=="ArgentinaLuz") 
+   {
+   descuento=precioTotal-(precioTotal*40/100);
+   txtIdprecioDescuento.value=descuento;
+   }else
+   {
+    if (cantidadDeLamparas==5 && marca!="ArgentinaLuz") 
+    {
+     descuento=precioTotal-(precioTotal*30/100);
+     txtIdprecioDescuento.value=descuento;
+    }
+   }
+  if (cantidadDeLamparas== 4 && marca=="ArgentinaLuz" || marca=="FelipeLampras") 
+  {
+   descuento=precioTotal-(precioTotal*25/100);
+   txtIdprecioDescuento.value=descuento;
+  }else
+  {
+    if (cantidadDeLamparas== 4 && marca!="ArgentinaLuz" || marca!="FelipeLamparas")
+    {    
+    descuento=precioTotal-(precioTotal*20/100);
+    txtIdprecioDescuento.value=descuento;  
+    }
+  }
+   if (cantidadDeLamparas==3 && marca=="ArgentinaLuz") 
+   {
+   descuento=precioTotal-(precioTotal*15/100);
+   txtIdprecioDescuento.value=descuento;
+   }
+  if (cantidadDeLamparas==3 && marca=="FelipeLampras")
+   {
+    descuento=precioTotal-(precioTotal*10/100);
+    txtIdprecioDescuento.value=descuento;
+   }else
+   {
+    if (cantidadDeLamparas==3 && marca!="FelipeLampras" || marca!="ArgentinaLuz" ) 
+    {
+    descuento=precioTotal-(precioTotal*5/100);
+    txtIdprecioDescuento.value=descuento;
+    }
+   }
+   if (descuento>120) 
+   {
+     precioFinal=(descuento*10/100);
+     alert("Usted pago "+descuento+" siendo "+precioFinal+" el impuesto que pago");
+     txtIdprecioDescuento.value=descuento+precioFinal;
+   }
+   
+}
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*
+
+/* 
     var precioUnitario;
     var cantidadDeLamparas;
     var marca; 
@@ -93,7 +124,7 @@ function CalcularPrecio ()
                      {
                       descuentoDelVeinte=precioUnitario*4;
                       descuentoDelVeinte=descuentoDelVeinte-(descuentoDelVeinte*20/100);
-                      txtIdprecioDescuento.value<=descuentoDelVeinte;  
+                      txtIdprecioDescuento.value=descuentoDelVeinte;  
                      } else
                         {                     
                          if(cantidadDeLamparas==3 && marca=="FelipeLamparas") 
@@ -119,6 +150,6 @@ function CalcularPrecio ()
                     }  
               }
             }
-     }*/        
+     }        
 }
-
+*/
